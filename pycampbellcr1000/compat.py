@@ -91,7 +91,7 @@ elif is_py3:
 
     str = str
     bytes = bytes
-    stdout = sys.stdout.buffer
+    stdout = getattr(sys.stdout, 'buffer', sys.stdout)
     xrange = range
 
 
